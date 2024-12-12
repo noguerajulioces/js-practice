@@ -1,6 +1,7 @@
 {
   "commonScreen": {
     "drawer": {
+      "back": "Back",
       "title": "Home",
       "loans": "My Loans",
       "donate": "Donate",

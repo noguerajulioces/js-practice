@@ -9,12 +9,15 @@ import '../global.css';
 import i18n from '../i18n';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { I18nextProvider } from 'react-i18next';
+import { I18nextProvider, useTranslation } from 'react-i18next';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+
+  const { t } = useTranslation();
+
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
@@ -34,9 +37,9 @@ export default function RootLayout() {
     <I18nextProvider i18n={i18n}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack>
-          <Stack.Screen name="(drawer)" options={{ title: 'Back', headerShown: false }} />
-          <Stack.Screen name="language" options={{ title: 'Idiomas' }} />
-          <Stack.Screen name="remove-ads" options={{ title: 'Eliminar Ads' }} />
+          <Stack.Screen name="(drawer)" options={{ title: t('commonScreen.drawer.back'), headerShown: false }} />
+          <Stack.Screen name="language" options={{ title: t('commonScreen.drawer.language') }} />
+          <Stack.Screen name="remove-ads" options={{ title:  t('commonScreen.drawer.removeAds'), }} />
           <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="auto" />

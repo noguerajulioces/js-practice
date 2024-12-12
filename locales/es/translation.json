@@ -1,6 +1,7 @@
 {
   "commonScreen": {
     "drawer": {
+      "back": "Atrás",
       "title": "Inicio",
       "loans": "Mis Préstamos",
       "donate": "Donar",
