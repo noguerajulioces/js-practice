@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
@@ -7,7 +7,11 @@ export default function HomeScreen() {
   const [amount, setAmount] = useState('');
   const [interest, setInterest] = useState('');
   const [duration, setDuration] = useState('');
+  const [payment, setPayment] = useState(0); // Estado para almacenar el resultado
 
+  const { t } = useTranslation();
+
+  // Función para calcular el pago
   const calculatePayment = () => {
     if (!amount || !interest || !duration) return 0;
 
@@ -18,11 +22,15 @@ export default function HomeScreen() {
     return ((principal * rate) / (1 - Math.pow(1 + rate, -months))).toFixed(2);
   };
 
-  const { t } = useTranslation();
+  // Efecto para recalcular el resultado cuando cambien los valores
+  useEffect(() => {
+    setPayment(calculatePayment());
+  }, [amount, interest, duration]);
 
   return (
-    <View style={styles.container}>  
+    <View style={styles.container}>
       <View style={styles.form}>
+        {/* Cantidad del préstamo */}
         <View style={styles.inputRow}>
           <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
           <TextInput
@@ -34,7 +42,8 @@ export default function HomeScreen() {
             onChangeText={setAmount}
           />
         </View>
-    
+
+        {/* Tasa de interés */}
         <View style={styles.inputRow}>
           <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
           <TextInput
@@ -46,7 +55,8 @@ export default function HomeScreen() {
             onChangeText={setInterest}
           />
         </View>
-    
+
+        {/* Duración */}
         <View style={styles.inputRow}>
           <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
           <TextInput
@@ -60,10 +70,13 @@ export default function HomeScreen() {
           <Text style={styles.unit}>{t('MainScreen.form.inputs.unit')}</Text>
         </View>
       </View>
-    
+
+      {/* Resultado */}
       <View style={styles.result}>
         <FontAwesome name="lock" size={24} color="#fff" style={styles.resultIcon} />
-        <Text style={styles.resultText}>{t('MainScreen.form.result.text', { payment: calculatePayment() })}</Text>
+        <Text style={styles.resultText}>
+          {t('MainScreen.form.result.text', { payment })}
+        </Text>
         <Text style={styles.resultLabel}>{t('MainScreen.form.result.label')}</Text>
       </View>
     </View>
@@ -74,21 +87,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-  },
-  header: {
-    backgroundColor: '#004e89',
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  menuIcon: {
-    marginRight: 10,
-  },
-  headerTitle: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
   },
   form: {
     padding: 20,
