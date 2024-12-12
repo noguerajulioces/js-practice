@@ -8,7 +8,8 @@
       "removeAds": "Remove Ads",
       "language": "Languages",
       "sharedAndWin": "Share and Win",
-      "rateUs": "Rate Us"
+      "rateUs": "Rate Us",
+      "rateUsFallback": "This feature is not supported on your device."
     }
   },
   "donateScreen": {

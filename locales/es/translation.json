@@ -8,7 +8,8 @@
       "removeAds": "Quitar Anuncios",
       "language": "Idiomas",
       "sharedAndWin": "Comparte y Gana",
-      "rateUs": "Califícanos"
+      "rateUs": "Califícanos",
+      "rateUsFallback": "This feature is not supported on your device."
     }
   },
   "donateScreen": {

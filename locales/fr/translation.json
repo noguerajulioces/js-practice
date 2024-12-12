@@ -8,7 +8,8 @@
       "removeAds": "Supprimer les Publicités",
       "language": "Langues",
       "sharedAndWin": "Partagez et Gagnez",
-      "rateUs": "Évaluez-nous"
+      "rateUs": "Évaluez-nous",
+      "rateUsFallback": "This feature is not supported on your device."
     }
   },
   "donateScreen": {

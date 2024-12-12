@@ -5,11 +5,20 @@ import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import FontAwesome from '@expo/vector-icons/build/FontAwesome';
 import * as Application from 'expo-application';
+import * as StoreReview from 'expo-store-review';
 import { View, Text, StyleSheet } from 'react-native';
 
 const CustomDrawerContent = (props: any) => {
   const { t } = useTranslation();
   const appVersion = Application.nativeApplicationVersion;
+
+  const handleRateUs = async () => {
+    if (await StoreReview.isAvailableAsync()) {
+      StoreReview.requestReview();
+    } else {
+      alert(t('commonScreen.drawer.rateUsFallback'));
+    }
+  };
 
   return (
     <DrawerContentScrollView 
@@ -41,9 +50,7 @@ const CustomDrawerContent = (props: any) => {
         <DrawerItem
           label={t('commonScreen.drawer.rateUs')}
           icon={() => <FontAwesome name="star" size={25} color="#000" /> }
-          onPress={() => {
-            router.push('/(drawer)/(tabs)/loans')
-          }}
+          onPress={handleRateUs}
         />
       </View>
       <View style={styles.versionContainer}>
