@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import { useTranslation } from 'react-i18next';
 
 export default function HomeScreen() {
   const [amount, setAmount] = useState('');
@@ -17,56 +18,53 @@ export default function HomeScreen() {
     return ((principal * rate) / (1 - Math.pow(1 + rate, -months))).toFixed(2);
   };
 
+  const { t } = useTranslation();
+
   return (
-    <View style={styles.container}>
-      {/* Formulario */}
+    <View style={styles.container}>  
       <View style={styles.form}>
-        {/* Cantidad del préstamo */}
         <View style={styles.inputRow}>
           <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
           <TextInput
             style={styles.input}
-            placeholder="Introduce la Cantidad"
+            placeholder={t('form.inputs.placeholder.amount')}
             placeholderTextColor="#ccc"
             keyboardType="numeric"
             value={amount}
             onChangeText={setAmount}
           />
         </View>
-
-        {/* Tasa de interés */}
+    
         <View style={styles.inputRow}>
           <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
           <TextInput
             style={styles.input}
-            placeholder="Introduce el porcentaje"
+            placeholder={t('form.inputs.placeholder.interest')}
             placeholderTextColor="#ccc"
             keyboardType="numeric"
             value={interest}
             onChangeText={setInterest}
           />
         </View>
-
-        {/* Duración */}
+    
         <View style={styles.inputRow}>
           <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
           <TextInput
             style={styles.input}
-            placeholder="Introduce la Duración"
+            placeholder={t('form.inputs.placeholder.duration')}
             placeholderTextColor="#ccc"
             keyboardType="numeric"
             value={duration}
             onChangeText={setDuration}
           />
-          <Text style={styles.unit}>meses</Text>
+          <Text style={styles.unit}>{t('form.inputs.unit')}</Text>
         </View>
       </View>
-
-      {/* Resultado */}
+    
       <View style={styles.result}>
         <FontAwesome name="lock" size={24} color="#fff" style={styles.resultIcon} />
-        <Text style={styles.resultText}>Gs. {calculatePayment()}</Text>
-        <Text style={styles.resultLabel}>al mes</Text>
+        <Text style={styles.resultText}>{t('form.result.text', { payment: calculatePayment() })}</Text>
+        <Text style={styles.resultLabel}>{t('form.result.label')}</Text>
       </View>
     </View>
   );

@@ -1,0 +1,25 @@
+{
+  "form": {
+    "welcome": "Bienvenido",
+    "description": "Calculadora de préstamos",
+    "inputs": {
+      "amount": "Cantidad del préstamo",
+      "interest": "Tasa de interés",
+      "duration": "Duración",
+      "placeholder": {
+        "amount": "Introduce la cantidad",
+        "interest": "Introduce el porcentaje",
+        "duration": "Introduce la duración"
+      },
+      "unit": "meses"
+    },
+    "result": {
+      "label": "Resultado",
+      "text": "Gs. {{payment}} al mes"
+    }
+  },
+  "button": {
+    "submit": "Calcular",
+    "cancel": "Cancelar"
+  }
+}

@@ -6,8 +6,10 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 import '../global.css';
+import i18n from '../i18n';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { I18nextProvider } from 'react-i18next';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -29,14 +31,16 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(drawer)" options={{ title: 'Back', headerShown: false }} />
-        <Stack.Screen name="language" options={{ title: 'Idiomas' }} />
-        <Stack.Screen name="remove-ads" options={{ title: 'Eliminar Ads' }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <I18nextProvider i18n={i18n}>
+      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <Stack>
+          <Stack.Screen name="(drawer)" options={{ title: 'Back', headerShown: false }} />
+          <Stack.Screen name="language" options={{ title: 'Idiomas' }} />
+          <Stack.Screen name="remove-ads" options={{ title: 'Eliminar Ads' }} />
+          <Stack.Screen name="+not-found" />
+        </Stack>
+        <StatusBar style="auto" />
+      </ThemeProvider>
+    </I18nextProvider>
   );
 }

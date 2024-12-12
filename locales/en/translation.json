@@ -1,0 +1,25 @@
+{
+  "form": {
+    "welcome": "Welcome",
+    "description": "Loan Calculator",
+    "inputs": {
+      "amount": "Loan Amount",
+      "interest": "Interest Rate",
+      "duration": "Duration",
+      "placeholder": {
+        "amount": "Enter the amount",
+        "interest": "Enter the percentage",
+        "duration": "Enter the duration"
+      },
+      "unit": "months"
+    },
+    "result": {
+      "label": "Result",
+      "text": "Gs. {{payment}} per month"
+    }
+  },
+  "button": {
+    "submit": "Calculate",
+    "cancel": "Cancel"
+  }
+}
