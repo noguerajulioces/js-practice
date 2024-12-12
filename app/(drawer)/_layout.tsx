@@ -10,13 +10,13 @@ const CustomDrawerContent = (props: any) => {
       <DrawerItem
         label="Quitar Anuncios"
         onPress={() => {
-          router.push('/(drawer)/(tabs)/donate')
+          router.push('/remove-ads')
         }}
       />
       <DrawerItem
         label="Idioma"
         onPress={() => {
-          router.push('/(drawer)/(tabs)/loans')
+          router.push('/language')
         }}
       />
       <DrawerItem
@@ -31,10 +31,6 @@ const CustomDrawerContent = (props: any) => {
           router.push('/(drawer)/(tabs)/loans')
         }}
       />
-
-      <View style={styles.viewContainer}>
-        <Text>test</Text>
-      </View>
     </DrawerContentScrollView>
   );
 };
