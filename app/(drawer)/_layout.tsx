@@ -30,7 +30,7 @@ const CustomDrawerContent = (props: any) => {
           label={t('commonScreen.drawer.removeAds')}
           icon={() => <FontAwesome name="ban" size={25} color="#000" /> }
           onPress={() => {
-            router.push('/remove-ads')
+            router.push('/(drawer)/(tabs)/donate')
           }}
         />
         <DrawerItem

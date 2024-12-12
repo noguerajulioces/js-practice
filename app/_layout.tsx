@@ -39,7 +39,6 @@ export default function RootLayout() {
         <Stack>
           <Stack.Screen name="(drawer)" options={{ title: t('commonScreen.drawer.back'), headerShown: false }} />
           <Stack.Screen name="language" options={{ title: t('commonScreen.drawer.language') }} />
-          <Stack.Screen name="remove-ads" options={{ title:  t('commonScreen.drawer.removeAds'), }} />
           <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="auto" />
