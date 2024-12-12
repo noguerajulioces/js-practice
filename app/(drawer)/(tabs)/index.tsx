@@ -27,7 +27,7 @@ export default function HomeScreen() {
           <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
           <TextInput
             style={styles.input}
-            placeholder={t('form.inputs.placeholder.amount')}
+            placeholder={t('MainScreen.form.inputs.placeholder.amount')}
             placeholderTextColor="#ccc"
             keyboardType="numeric"
             value={amount}
@@ -39,7 +39,7 @@ export default function HomeScreen() {
           <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
           <TextInput
             style={styles.input}
-            placeholder={t('form.inputs.placeholder.interest')}
+            placeholder={t('MainScreen.form.inputs.placeholder.interest')}
             placeholderTextColor="#ccc"
             keyboardType="numeric"
             value={interest}
@@ -51,20 +51,20 @@ export default function HomeScreen() {
           <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
           <TextInput
             style={styles.input}
-            placeholder={t('form.inputs.placeholder.duration')}
+            placeholder={t('MainScreen.form.inputs.placeholder.duration')}
             placeholderTextColor="#ccc"
             keyboardType="numeric"
             value={duration}
             onChangeText={setDuration}
           />
-          <Text style={styles.unit}>{t('form.inputs.unit')}</Text>
+          <Text style={styles.unit}>{t('MainScreen.form.inputs.unit')}</Text>
         </View>
       </View>
     
       <View style={styles.result}>
         <FontAwesome name="lock" size={24} color="#fff" style={styles.resultIcon} />
-        <Text style={styles.resultText}>{t('form.result.text', { payment: calculatePayment() })}</Text>
-        <Text style={styles.resultLabel}>{t('form.result.label')}</Text>
+        <Text style={styles.resultText}>{t('MainScreen.form.result.text', { payment: calculatePayment() })}</Text>
+        <Text style={styles.resultLabel}>{t('MainScreen.form.result.label')}</Text>
       </View>
     </View>
   );

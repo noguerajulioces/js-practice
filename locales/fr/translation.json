@@ -1,0 +1,55 @@
+{
+  "commonScreen": {
+    "drawer": {
+      "title": "Accueil",
+      "loans": "Mes Prêts",
+      "donate": "Faire un Don",
+      "removeAds": "Supprimer les Publicités",
+      "language": "Langues",
+      "sharedAndWin": "Partagez et Gagnez",
+      "rateUs": "Évaluez-nous"
+    }
+  },
+  "donateScreen": {
+    "title": "Tout cela est possible grâce à vous !",
+    "description": "La Calculatrice de Prêts est entièrement gratuite et nous travaillons dur pour créer de nouvelles applications. Si vous aimez notre application, vous pouvez soutenir notre équipe avec un peu d'amour pour alimenter nos efforts ! En échange, nous activerons les notifications sur le moment où vous devez payer vos prêts et nous supprimerons les publicités.",
+    "subtitle": "Vos dons nous aident énormément\n",
+    "smallText": "Nourrissez nos animaux de compagnie",
+    "donationOptions": {
+      "option1": "USD 2,99",
+      "option2": "USD 4,99",
+      "option3": "USD 6,99"
+    },
+    "restorePurchase": "RESTAURER L'ACHAT",
+    "thankYou": "Merci d'avoir donné USD {{amount}} !",
+    "restoreMessage": "Vos achats ont été restaurés."
+  },
+  "MainScreen": {
+    "form": {
+      "welcome": "Bienvenue",
+      "description": "Calculatrice de prêts",
+      "inputs": {
+        "amount": "Montant du prêt",
+        "interest": "Taux d'intérêt",
+        "duration": "Durée",
+        "placeholder": {
+          "amount": "Entrez le montant",
+          "interest": "Entrez le pourcentage",
+          "duration": "Entrez la durée"
+        },
+        "unit": "mois"
+      },
+      "result": {
+        "label": "Résultat",
+        "text": "$ {{payment}} par mois"
+      }
+    },
+    "button": {
+      "submit": "Calculer",
+      "cancel": "Annuler"
+    }
+  },
+  "languageScreen": {
+    "selectLanguage": "Sélectionnez votre langue"
+  }
+}

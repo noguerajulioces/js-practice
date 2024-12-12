@@ -3,30 +3,32 @@ import { StyleSheet, View, Text } from 'react-native';
 import { Drawer } from 'expo-router/drawer';
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import { router } from 'expo-router';
+import { useTranslation } from 'react-i18next';
 
 const CustomDrawerContent = (props: any) => {
+  const { t } = useTranslation();
   return (
     <DrawerContentScrollView {...props}>
       <DrawerItem
-        label="Quitar Anuncios"
+        label={t('commonScreen.drawer.removeAds')}
         onPress={() => {
           router.push('/remove-ads')
         }}
       />
       <DrawerItem
-        label="Idioma"
+        label={t('commonScreen.drawer.language')}
         onPress={() => {
           router.push('/language')
         }}
       />
       <DrawerItem
-        label="Comparte y gana"
+        label={t('commonScreen.drawer.sharedAndWin')}
         onPress={() => {
           router.push('/(drawer)/(tabs)/loans')
         }}
       />
       <DrawerItem
-        label="Califícanos"
+        label={t('commonScreen.drawer.rateUs')}
         onPress={() => {
           router.push('/(drawer)/(tabs)/loans')
         }}

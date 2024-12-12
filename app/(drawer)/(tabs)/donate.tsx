@@ -1,52 +1,46 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { useTranslation } from 'react-i18next';
 
 export default function donateScreen() {
+  const { t } = useTranslation();
+
   const handleDonation = (amount: number) => {
-    alert(`¡Gracias por donar USD ${amount}!`);
+    alert(t('donateScreen.thankYou', { amount: amount.toFixed(2) }));
   };
 
   const restorePurchase = () => {
-    alert('Tus compras han sido restauradas.');
+    alert(t('donateScreen.restoreMessage'));
   };
 
   return (
     <View style={styles.container}>
       {/* Mensaje Principal */}
       <View style={styles.message}>
-        <Text style={styles.title}>Todo esto es posible gracias a ti!</Text>
-        <Text style={styles.description}>
-          La Calculadora de Préstamos es completamente gratis y estamos trabajando muy duro para
-          hacer nuevas aplicaciones! Si te gusta nuestra aplicación, puedes apoyar a nuestro equipo
-          con un poco de amor para alimentar nuestros esfuerzos! A cambio, vamos a habilitar las
-          notificaciones sobre cuándo tiene que pagar sus préstamos y eliminaremos los anuncios!
-        </Text>
+        <Text style={styles.title}>{t('donateScreen.title')}</Text>
+        <Text style={styles.description}>{t('donateScreen.description')}</Text>
         <Text style={styles.subtitle}>
-          Tus donaciones nos ayudan muchísimo{'\n'}<Text style={styles.smallText}>Alimenta nuestras mascotas</Text>
+          {t('donateScreen.subtitle')}
+          <Text style={styles.smallText}>{t('donateScreen.smallText')}</Text>
         </Text>
-      </View>
-
-      {/* Imagen */}
-      <View style={styles.imageContainer}>
-        
       </View>
 
       {/* Botones de Donación */}
       <View style={styles.donationContainer}>
         <TouchableOpacity style={styles.donationButton} onPress={() => handleDonation(2.99)}>
-          <Text style={styles.donationText}>USD 2,99</Text>
+          <Text style={styles.donationText}>{t('donateScreen.donationOptions.option1')}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.donationButton} onPress={() => handleDonation(4.99)}>
-          <Text style={styles.donationText}>USD 4,99</Text>
+          <Text style={styles.donationText}>{t('donateScreen.donationOptions.option2')}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.donationButton} onPress={() => handleDonation(6.99)}>
-          <Text style={styles.donationText}>USD 6,99</Text>
+          <Text style={styles.donationText}>{t('donateScreen.donationOptions.option3')}</Text>
         </TouchableOpacity>
       </View>
 
       {/* Botón Restaurar Compra */}
       <TouchableOpacity style={styles.restoreButton} onPress={restorePurchase}>
-        <Text style={styles.restoreText}>RESTAURAR COMPRA</Text>
+        <Text style={styles.restoreText}>{t('donateScreen.restorePurchase')}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -56,16 +50,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-  },
-  header: {
-    backgroundColor: '#000',
-    paddingVertical: 15,
-    alignItems: 'center',
-  },
-  headerTitle: {
-    color: '#fff',
-    fontSize: 20,
-    fontWeight: 'bold',
   },
   message: {
     padding: 20,
@@ -92,15 +76,6 @@ const styles = StyleSheet.create({
   smallText: {
     fontSize: 12,
     color: '#666',
-  },
-  imageContainer: {
-    alignItems: 'center',
-    marginVertical: 20,
-  },
-  image: {
-    width: 150,
-    height: 150,
-    resizeMode: 'contain',
   },
   donationContainer: {
     flexDirection: 'row',

@@ -1,25 +1,55 @@
 {
-  "form": {
-    "welcome": "Bienvenido",
-    "description": "Calculadora de préstamos",
-    "inputs": {
-      "amount": "Cantidad del préstamo",
-      "interest": "Tasa de interés",
-      "duration": "Duración",
-      "placeholder": {
-        "amount": "Introduce la cantidad",
-        "interest": "Introduce el porcentaje",
-        "duration": "Introduce la duración"
-      },
-      "unit": "meses"
-    },
-    "result": {
-      "label": "Resultado",
-      "text": "Gs. {{payment}} al mes"
+  "commonScreen": {
+    "drawer": {
+      "title": "Inicio",
+      "loans": "Mis Préstamos",
+      "donate": "Donar",
+      "removeAds": "Quitar Anuncios",
+      "language": "Idiomas",
+      "sharedAndWin": "Comparte y Gana",
+      "rateUs": "Califícanos"
     }
   },
-  "button": {
-    "submit": "Calcular",
-    "cancel": "Cancelar"
+  "donateScreen": {
+    "title": "¡Todo esto es posible gracias a ti!",
+    "description": "La Calculadora de Préstamos es completamente gratis, y estamos trabajando duro para crear nuevas aplicaciones. ¡Si te gusta nuestra aplicación, puedes apoyar a nuestro equipo con un poco de amor para alimentar nuestros esfuerzos! A cambio, habilitaremos notificaciones sobre cuándo necesitas pagar tus préstamos y eliminaremos los anuncios.",
+    "subtitle": "Tus donaciones nos ayudan muchísimo\n",
+    "smallText": "Alimenta a nuestras mascotas",
+    "donationOptions": {
+      "option1": "USD 2,99",
+      "option2": "USD 4,99",
+      "option3": "USD 6,99"
+    },
+    "restorePurchase": "RESTAURAR COMPRA",
+    "thankYou": "¡Gracias por donar USD {{amount}}!",
+    "restoreMessage": "Tus compras han sido restauradas."
+  },
+  "MainScreen": {
+    "form": {
+      "welcome": "Bienvenido",
+      "description": "Calculadora de préstamos",
+      "inputs": {
+        "amount": "Cantidad del préstamo",
+        "interest": "Tasa de interés",
+        "duration": "Duración",
+        "placeholder": {
+          "amount": "Introduce la cantidad",
+          "interest": "Introduce el porcentaje",
+          "duration": "Introduce la duración"
+        },
+        "unit": "meses"
+      },
+      "result": {
+        "label": "Resultado",
+        "text": "$ {{payment}} al mes"
+      }
+    },
+    "button": {
+      "submit": "Calcular",
+      "cancel": "Cancelar"
+    }
+  },
+  "languageScreen": {
+    "selectLanguage": "Selecciona tu idioma"
   }
 }

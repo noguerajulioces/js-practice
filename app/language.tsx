@@ -29,7 +29,7 @@ export default function LanguageScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>{t('Select your language')}:</Text>
+      <Text style={styles.label}>{t('languageScreen.selectLanguage')}:</Text>
 
       <View style={styles.languageList}>
         {languages.map(({ code, label }) => (

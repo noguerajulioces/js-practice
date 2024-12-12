@@ -1,25 +1,55 @@
 {
-  "form": {
-    "welcome": "Welcome",
-    "description": "Loan Calculator",
-    "inputs": {
-      "amount": "Loan Amount",
-      "interest": "Interest Rate",
-      "duration": "Duration",
-      "placeholder": {
-        "amount": "Enter the amount",
-        "interest": "Enter the percentage",
-        "duration": "Enter the duration"
-      },
-      "unit": "months"
-    },
-    "result": {
-      "label": "Result",
-      "text": "Gs. {{payment}} per month"
+  "commonScreen": {
+    "drawer": {
+      "title": "Home",
+      "loans": "My Loans",
+      "donate": "Donate",
+      "removeAds": "Remove Ads",
+      "language": "Languages",
+      "sharedAndWin": "Share and Win",
+      "rateUs": "Rate Us"
     }
   },
-  "button": {
-    "submit": "Calculate",
-    "cancel": "Cancel"
+  "donateScreen": {
+    "title": "All of this is possible thanks to you!",
+    "description": "The Loan Calculator is completely free, and we are working hard to create new applications! If you like our app, you can support our team with a little love to fuel our efforts! In return, we will enable notifications about when you need to pay your loans and remove the ads!",
+    "subtitle": "Your donations help us so much\n",
+    "smallText": "Feed our pets",
+    "donationOptions": {
+      "option1": "USD 2.99",
+      "option2": "USD 4.99",
+      "option3": "USD 6.99"
+    },
+    "restorePurchase": "RESTORE PURCHASE",
+    "thankYou": "Thank you for donating USD {{amount}}!",
+    "restoreMessage": "Your purchases have been restored."
+  },
+  "MainScreen": {
+    "form": {
+      "welcome": "Welcome",
+      "description": "Loan Calculator",
+      "inputs": {
+        "amount": "Loan Amount",
+        "interest": "Interest Rate",
+        "duration": "Duration",
+        "placeholder": {
+          "amount": "Enter the amount",
+          "interest": "Enter the percentage",
+          "duration": "Enter the duration"
+        },
+        "unit": "months"
+      },
+      "result": {
+        "label": "Result",
+        "text": "$ {{payment}} per month"
+      }
+    },
+    "button": {
+      "submit": "Calculate",
+      "cancel": "Cancel"
+    }
+  },
+  "languageScreen": {
+    "selectLanguage": "Select your Language"
   }
 }
