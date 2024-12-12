@@ -43,7 +43,7 @@
       },
       "result": {
         "label": "Résultat",
-        "text": "$ {{payment}} par mois"
+        "text": "{{payment}} par mois"
       }
     },
     "button": {

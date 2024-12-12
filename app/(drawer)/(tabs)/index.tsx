@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
+import { calculatePayment, formatNumber, formatCurrency } from '../../../utils/loanCalculator';
 
 export default function HomeScreen() {
   const [amount, setAmount] = useState('');
@@ -11,21 +12,11 @@ export default function HomeScreen() {
 
   const { t } = useTranslation();
 
-  // Función para calcular el pago
-  const calculatePayment = () => {
-    if (!amount || !interest || !duration) return 0;
-
-    const principal = parseFloat(amount);
-    const rate = parseFloat(interest) / 100 / 12;
-    const months = parseInt(duration, 10);
-
-    return ((principal * rate) / (1 - Math.pow(1 + rate, -months))).toFixed(2);
-  };
-
   // Efecto para recalcular el resultado cuando cambien los valores
   useEffect(() => {
-    setPayment(calculatePayment());
+    setPayment(calculatePayment(amount, interest, duration));
   }, [amount, interest, duration]);
+
 
   return (
     <View style={styles.container}>
@@ -39,7 +30,10 @@ export default function HomeScreen() {
             placeholderTextColor="#ccc"
             keyboardType="numeric"
             value={amount}
-            onChangeText={setAmount}
+            onChangeText={(value) => {
+              const numericValue = value.replace(/,/g, '');
+              setAmount(formatNumber(numericValue));
+            }}
           />
         </View>
 
@@ -52,7 +46,10 @@ export default function HomeScreen() {
             placeholderTextColor="#ccc"
             keyboardType="numeric"
             value={interest}
-            onChangeText={setInterest}
+            onChangeText={(value) => {
+              const newValue = value.replace(/,/g, '');
+              setInterest(formatNumber(newValue));
+            }}
           />
         </View>
 
@@ -65,7 +62,10 @@ export default function HomeScreen() {
             placeholderTextColor="#ccc"
             keyboardType="numeric"
             value={duration}
-            onChangeText={setDuration}
+            onChangeText={(value) => {
+              const newValue = value.replace(/,/g, '');
+              setDuration(formatNumber(newValue));
+            }}
           />
           <Text style={styles.unit}>{t('MainScreen.form.inputs.unit')}</Text>
         </View>
@@ -75,7 +75,7 @@ export default function HomeScreen() {
       <View style={styles.result}>
         <FontAwesome name="lock" size={24} color="#fff" style={styles.resultIcon} />
         <Text style={styles.resultText}>
-          {t('MainScreen.form.result.text', { payment })}
+          {t('MainScreen.form.result.text', { payment: formatCurrency(payment) })}
         </Text>
         <Text style={styles.resultLabel}>{t('MainScreen.form.result.label')}</Text>
       </View>
