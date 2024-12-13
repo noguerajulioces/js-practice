@@ -39,6 +39,7 @@ export default function RootLayout() {
         <Stack>
           <Stack.Screen name="(drawer)" options={{ title: t('commonScreen.drawer.back'), headerShown: false }} />
           <Stack.Screen name="language" options={{ title: t('commonScreen.drawer.language') }} />
+          <Stack.Screen name="amortization" options={{ title: t('commonScreen.drawer.amortization') }} />
           <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="auto" />
