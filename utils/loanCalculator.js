@@ -20,8 +20,10 @@ export const totalToPay = (amount, duration) => {
 }
 
 export const getFees = (payment, amount, duration) => {
-  if (!payment || !amount || !duration) return 0; // Validar entradas
-  return parseFloat(payment) - parseFloat(amount); // Ejemplo
+  if (!payment || !amount || !duration) return 0;
+  const final = amount - payment;
+
+  return parseFloat(final);
 };
 
 export const getCapital = (amount) => {
@@ -31,10 +33,7 @@ export const getCapital = (amount) => {
 
 
 export const formatNumber = (value) => {
-  // Elimina cualquier separación anterior
   const numericValue = value.replace(/,/g, '');
-
-  // Formatea el número con separador de miles
   return new Intl.NumberFormat('en-US').format(numericValue);
 };
 

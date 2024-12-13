@@ -27,6 +27,10 @@
     "restoreMessage": "Tus compras han sido restauradas."
   },
   "MainScreen": {
+    "chart": {
+      "fees": "Interés",
+      "capital": "Capital"
+    },
     "form": {
       "welcome": "Bienvenido",
       "description": "Calculadora de préstamos",
