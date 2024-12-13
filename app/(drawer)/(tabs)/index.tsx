@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, StyleSheet, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
 import { calculatePayment, formatNumber, formatCurrency } from '../../../utils/loanCalculator';
@@ -17,69 +17,74 @@ export default function HomeScreen() {
     setPayment(calculatePayment(amount, interest, duration));
   }, [amount, interest, duration]);
 
+  const dismissKeyboard = () => {
+    Keyboard.dismiss();
+  };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.form}>
-        {/* Cantidad del préstamo */}
-        <View style={styles.inputRow}>
-          <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
-          <TextInput
-            style={styles.input}
-            placeholder={t('MainScreen.form.inputs.placeholder.amount')}
-            placeholderTextColor="#ccc"
-            keyboardType="numeric"
-            value={amount}
-            onChangeText={(value) => {
-              const numericValue = value.replace(/,/g, '');
-              setAmount(formatNumber(numericValue));
-            }}
-          />
+    <TouchableWithoutFeedback onPress={dismissKeyboard}>
+      <View style={styles.container}>
+        <View style={styles.form}>
+          {/* Cantidad del préstamo */}
+          <View style={styles.inputRow}>
+            <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
+            <TextInput
+              style={styles.input}
+              placeholder={t('MainScreen.form.inputs.placeholder.amount')}
+              placeholderTextColor="#ccc"
+              keyboardType="numeric"
+              value={amount}
+              onChangeText={(value) => {
+                const numericValue = value.replace(/,/g, '');
+                setAmount(formatNumber(numericValue));
+              }}
+            />
+          </View>
+
+          {/* Tasa de interés */}
+          <View style={styles.inputRow}>
+            <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
+            <TextInput
+              style={styles.input}
+              placeholder={t('MainScreen.form.inputs.placeholder.interest')}
+              placeholderTextColor="#ccc"
+              keyboardType="numeric"
+              value={interest}
+              onChangeText={(value) => {
+                const newValue = value.replace(/,/g, '');
+                setInterest(formatNumber(newValue));
+              }}
+            />
+          </View>
+
+          {/* Duración */}
+          <View style={styles.inputRow}>
+            <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
+            <TextInput
+              style={styles.input}
+              placeholder={t('MainScreen.form.inputs.placeholder.duration')}
+              placeholderTextColor="#ccc"
+              keyboardType="numeric"
+              value={duration}
+              onChangeText={(value) => {
+                const newValue = value.replace(/,/g, '');
+                setDuration(formatNumber(newValue));
+              }}
+            />
+            <Text style={styles.unit}>{t('MainScreen.form.inputs.unit')}</Text>
+          </View>
         </View>
 
-        {/* Tasa de interés */}
-        <View style={styles.inputRow}>
-          <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
-          <TextInput
-            style={styles.input}
-            placeholder={t('MainScreen.form.inputs.placeholder.interest')}
-            placeholderTextColor="#ccc"
-            keyboardType="numeric"
-            value={interest}
-            onChangeText={(value) => {
-              const newValue = value.replace(/,/g, '');
-              setInterest(formatNumber(newValue));
-            }}
-          />
-        </View>
-
-        {/* Duración */}
-        <View style={styles.inputRow}>
-          <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
-          <TextInput
-            style={styles.input}
-            placeholder={t('MainScreen.form.inputs.placeholder.duration')}
-            placeholderTextColor="#ccc"
-            keyboardType="numeric"
-            value={duration}
-            onChangeText={(value) => {
-              const newValue = value.replace(/,/g, '');
-              setDuration(formatNumber(newValue));
-            }}
-          />
-          <Text style={styles.unit}>{t('MainScreen.form.inputs.unit')}</Text>
+        {/* Resultado */}
+        <View style={styles.result}>
+          <FontAwesome name="lock" size={24} color="#fff" style={styles.resultIcon} />
+          <Text style={styles.resultText}>
+            {t('MainScreen.form.result.text', { payment: formatCurrency(payment) })}
+          </Text>
+          <Text style={styles.resultLabel}>{t('MainScreen.form.result.label')}</Text>
         </View>
       </View>
-
-      {/* Resultado */}
-      <View style={styles.result}>
-        <FontAwesome name="lock" size={24} color="#fff" style={styles.resultIcon} />
-        <Text style={styles.resultText}>
-          {t('MainScreen.form.result.text', { payment: formatCurrency(payment) })}
-        </Text>
-        <Text style={styles.resultLabel}>{t('MainScreen.form.result.label')}</Text>
-      </View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 }
 

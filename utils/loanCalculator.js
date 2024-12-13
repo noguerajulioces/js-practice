@@ -8,7 +8,7 @@
  * @returns {string} - El pago mensual formateado con dos decimales.
  */
 export const calculatePayment = (amount, interest, duration) => {
-  if (!amount || !interest || !duration) return '0.00';
+  if (!amount || !interest || !duration) return 0;
 
   // Eliminar comas de los valores
   const cleanAmount = parseFloat(amount.replace(/,/g, ''));
