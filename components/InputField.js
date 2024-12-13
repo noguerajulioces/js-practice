@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, TextInput, StyleSheet, Text } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
-export default function InputField({ label, value, setValue, suffix = '' }) {
+export default function InputField({ label, value = '', setValue, suffix = '', formatter }) {
+  const [isEditing, setIsEditing] = useState(false);
+
+  const handleBlur = () => {
+    setIsEditing(false);
+
+    console.log("value ", value);
+    //const parsedValue = parseFloat(value?.toString().replace(/,/g, '') || '0');
+    //setValue(formatter ? formatter(parsedValue) : parsedValue.toString());
+  };  
+
+  const handleFocus = () => {
+    setIsEditing(true);
+
+  };
+
   return (
     <View style={styles.inputRow}>
       <FontAwesome name="unlock-alt" size={24} color="#004e89" style={styles.icon} />
@@ -11,8 +26,10 @@ export default function InputField({ label, value, setValue, suffix = '' }) {
         placeholder={label}
         placeholderTextColor="#ccc"
         keyboardType="numeric"
-        value={value}
-        onChangeText={(text) => setValue(text.replace(/,/g, ''))}
+        value={isEditing ? value : formatter ? formatter(value || '') : value}
+        onChangeText={(text) => setValue(text.replace(/[^0-9.]/g, ''))}
+        onBlur={handleBlur}
+        onFocus={handleFocus}
       />
       {suffix ? <Text style={styles.suffix}>{suffix}</Text> : null}
     </View>
