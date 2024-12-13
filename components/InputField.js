@@ -11,7 +11,6 @@ export default function InputField({ label, value = '', setValue, suffix = '', f
 
   const handleFocus = () => {
     setIsEditing(true);
-
   };
 
   return (
