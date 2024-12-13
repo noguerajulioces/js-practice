@@ -7,10 +7,6 @@ export default function InputField({ label, value = '', setValue, suffix = '', f
 
   const handleBlur = () => {
     setIsEditing(false);
-
-    console.log("value ", value);
-    //const parsedValue = parseFloat(value?.toString().replace(/,/g, '') || '0');
-    //setValue(formatter ? formatter(parsedValue) : parsedValue.toString());
   };  
 
   const handleFocus = () => {

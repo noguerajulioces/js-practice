@@ -18,13 +18,7 @@ export default function HomeScreen() {
   const { t } = useTranslation();
 
   const validateValue = (value) => {
-    console.log(" valida value ", value);
     const parsedValue = parseFloat(value);
-
-    console.log(" parsedValue parsedValue ", parsedValue);
-
-    console.log(" isNaN(parsedValue) || parsedValue <= 0 ? 0 : parsedValue = ", isNaN(parsedValue) || parsedValue <= 0 ? 0 : parsedValue);
-
     return isNaN(parsedValue) || parsedValue <= 0 ? 0 : parsedValue;
   };
   
