@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
   suffix: {
     color: '#777',
-    fontSize: 14,
+    fontSize: 20,
     marginLeft: 5,
   },
 });
