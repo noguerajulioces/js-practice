@@ -1,0 +1,68 @@
+{
+  "commonScreen": {
+    "drawer": {
+      "back": "Indietro",
+      "title": "Home",
+      "loans": "I miei Prestiti",
+      "donate": "Dona",
+      "removeAds": "Rimuovi Annunci",
+      "language": "Lingue",
+      "sharedAndWin": "Condividi e Vinci",
+      "rateUs": "Valutaci",
+      "rateUsFallback": "Questa funzione non è supportata sul tuo dispositivo."
+    }
+  },
+  "donateScreen": {
+    "title": "Tutto questo è possibile grazie a te!",
+    "description": "Il Calcolatore di Prestiti è completamente gratuito e stiamo lavorando duramente per creare nuove applicazioni. Se ti piace la nostra app, puoi supportare il nostro team con un po' di amore per alimentare i nostri sforzi! In cambio, abiliteremo le notifiche su quando devi pagare i tuoi prestiti e rimuoveremo gli annunci.",
+    "subtitle": "Le tue donazioni ci aiutano molto\n",
+    "smallText": "Nutri i nostri animali domestici",
+    "donationOptions": {
+      "option1": "USD 2.99",
+      "option2": "USD 4.99",
+      "option3": "USD 6.99"
+    },
+    "restorePurchase": "RIPRISTINA ACQUISTO",
+    "thankYou": "Grazie per aver donato USD {{amount}}!",
+    "restoreMessage": "I tuoi acquisti sono stati ripristinati."
+  },
+  "MainScreen": {
+    "chart": {
+      "fees": "Interessi",
+      "capital": "Capitale"
+    },
+    "form": {
+      "welcome": "Benvenuto",
+      "description": "Calcolatore di Prestiti",
+      "inputs": {
+        "amount": "Importo del Prestito",
+        "interest": "Tasso di Interesse",
+        "duration": "Durata",
+        "placeholder": {
+          "amount": "Inserisci l'importo",
+          "interest": "Inserisci la percentuale",
+          "duration": "Inserisci la durata"
+        },
+        "unit": "mesi"
+      },
+      "result": {
+        "label": "Risultato",
+        "text": "{{payment}} al mese"
+      }
+    },
+    "button": {
+      "submit": "Calcola",
+      "cancel": "Annulla"
+    }
+  },
+  "languageScreen": {
+    "selectLanguage": "Seleziona la tua lingua"
+  },
+  "components": {
+    "SummarySection": {
+      "totalToPay": "Totale da Pagare",
+      "amortizationTable": "Tabella di Ammortamento",
+      "saveLoan": "Salva"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "commonScreen": {
+    "drawer": {
+      "back": "戻る",
+      "title": "ホーム",
+      "loans": "私のローン",
+      "donate": "寄付する",
+      "removeAds": "広告を削除",
+      "language": "言語",
+      "sharedAndWin": "共有して獲得",
+      "rateUs": "評価する",
+      "rateUsFallback": "この機能はお使いのデバイスでサポートされていません。"
+    }
+  },
+  "donateScreen": {
+    "title": "これもすべてあなたのおかげです！",
+    "description": "ローン計算機は完全無料で、新しいアプリを作成するために一生懸命取り組んでいます。アプリを気に入っていただけたら、私たちのチームを少しの愛で応援してください！そのお礼として、ローン返済通知を有効化し、広告を削除します。",
+    "subtitle": "あなたの寄付は大変助かります\n",
+    "smallText": "ペットに食事を与える",
+    "donationOptions": {
+      "option1": "USD 2.99",
+      "option2": "USD 4.99",
+      "option3": "USD 6.99"
+    },
+    "restorePurchase": "購入を復元",
+    "thankYou": "USD {{amount}} の寄付をありがとうございます！",
+    "restoreMessage": "購入が復元されました。"
+  },
+  "MainScreen": {
+    "chart": {
+      "fees": "利息",
+      "capital": "元本"
+    },
+    "form": {
+      "welcome": "ようこそ",
+      "description": "ローン計算機",
+      "inputs": {
+        "amount": "ローン金額",
+        "interest": "金利",
+        "duration": "期間",
+        "placeholder": {
+          "amount": "金額を入力",
+          "interest": "パーセンテージを入力",
+          "duration": "期間を入力"
+        },
+        "unit": "月"
+      },
+      "result": {
+        "label": "結果",
+        "text": "{{payment}} / 月"
+      }
+    },
+    "button": {
+      "submit": "計算",
+      "cancel": "キャンセル"
+    }
+  },
+  "languageScreen": {
+    "selectLanguage": "言語を選択"
+  },
+  "components": {
+    "SummarySection": {
+      "totalToPay": "支払総額",
+      "amortizationTable": "償却表",
+      "saveLoan": "保存"
+    }
+  }
+}

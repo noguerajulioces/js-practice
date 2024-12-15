@@ -14,8 +14,8 @@
   },
   "donateScreen": {
     "title": "All of this is possible thanks to you!",
-    "description": "The Loan Calculator is completely free, and we are working hard to create new applications! If you like our app, you can support our team with a little love to fuel our efforts! In return, we will enable notifications about when you need to pay your loans and remove the ads!",
-    "subtitle": "Your donations help us so much\n",
+    "description": "The Loan Calculator is completely free, and we are working hard to create new applications. If you like our app, you can support our team with a little love to fuel our efforts! In return, we will enable notifications about when you need to pay your loans and remove the ads.",
+    "subtitle": "Your donations help us a lot\n",
     "smallText": "Feed our pets",
     "donationOptions": {
       "option1": "USD 2.99",
@@ -27,6 +27,10 @@
     "restoreMessage": "Your purchases have been restored."
   },
   "MainScreen": {
+    "chart": {
+      "fees": "Interest",
+      "capital": "Principal"
+    },
     "form": {
       "welcome": "Welcome",
       "description": "Loan Calculator",
@@ -52,12 +56,13 @@
     }
   },
   "languageScreen": {
-    "selectLanguage": "Select your Language"
+    "selectLanguage": "Select your language"
   },
   "components": {
-    "SummarySection":{
-      "totalToPay": "Total a Abonar",
-      "saveLoan": "Save loan"
+    "SummarySection": {
+      "totalToPay": "Total to Pay",
+      "amortizationTable": "Amortization Table",
+      "saveLoan": "Save"
     }
   }
 }

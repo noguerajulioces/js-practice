@@ -1,0 +1,68 @@
+{
+  "commonScreen": {
+    "drawer": {
+      "back": "Voltar",
+      "title": "Início",
+      "loans": "Meus Empréstimos",
+      "donate": "Doar",
+      "removeAds": "Remover Anúncios",
+      "language": "Idiomas",
+      "sharedAndWin": "Compartilhe e Ganhe",
+      "rateUs": "Avalie-nos",
+      "rateUsFallback": "Este recurso não é compatível com o seu dispositivo."
+    }
+  },
+  "donateScreen": {
+    "title": "Tudo isso é possível graças a você!",
+    "description": "O Calculador de Empréstimos é totalmente gratuito, e estamos trabalhando duro para criar novos aplicativos. Se você gosta do nosso aplicativo, pode apoiar nossa equipe com um pouco de amor para alimentar nossos esforços! Em troca, ativaremos notificações sobre quando você precisa pagar seus empréstimos e removeremos os anúncios.",
+    "subtitle": "Suas doações nos ajudam muito\n",
+    "smallText": "Alimente nossos mascotes",
+    "donationOptions": {
+      "option1": "USD 2.99",
+      "option2": "USD 4.99",
+      "option3": "USD 6.99"
+    },
+    "restorePurchase": "RESTAURAR COMPRA",
+    "thankYou": "Obrigado por doar USD {{amount}}!",
+    "restoreMessage": "Suas compras foram restauradas."
+  },
+  "MainScreen": {
+    "chart": {
+      "fees": "Juros",
+      "capital": "Capital"
+    },
+    "form": {
+      "welcome": "Bem-vindo",
+      "description": "Calculadora de Empréstimos",
+      "inputs": {
+        "amount": "Valor do Empréstimo",
+        "interest": "Taxa de Juros",
+        "duration": "Duração",
+        "placeholder": {
+          "amount": "Digite o valor",
+          "interest": "Digite a porcentagem",
+          "duration": "Digite a duração"
+        },
+        "unit": "meses"
+      },
+      "result": {
+        "label": "Resultado",
+        "text": "{{payment}} por mês"
+      }
+    },
+    "button": {
+      "submit": "Calcular",
+      "cancel": "Cancelar"
+    }
+  },
+  "languageScreen": {
+    "selectLanguage": "Selecione seu idioma"
+  },
+  "components": {
+    "SummarySection": {
+      "totalToPay": "Total a Pagar",
+      "amortizationTable": "Tabela de Amortização",
+      "saveLoan": "Salvar"
+    }
+  }
+}

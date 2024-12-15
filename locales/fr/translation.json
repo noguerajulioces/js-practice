@@ -1,38 +1,42 @@
 {
   "commonScreen": {
     "drawer": {
-      "back": "Dos",
+      "back": "Retour",
       "title": "Accueil",
       "loans": "Mes Prêts",
       "donate": "Faire un Don",
       "removeAds": "Supprimer les Publicités",
       "language": "Langues",
-      "sharedAndWin": "Partagez et Gagnez",
+      "sharedAndWin": "Partager et Gagner",
       "rateUs": "Évaluez-nous",
-      "rateUsFallback": "This feature is not supported on your device."
+      "rateUsFallback": "Cette fonctionnalité n'est pas prise en charge sur votre appareil."
     }
   },
   "donateScreen": {
     "title": "Tout cela est possible grâce à vous !",
-    "description": "La Calculatrice de Prêts est entièrement gratuite et nous travaillons dur pour créer de nouvelles applications. Si vous aimez notre application, vous pouvez soutenir notre équipe avec un peu d'amour pour alimenter nos efforts ! En échange, nous activerons les notifications sur le moment où vous devez payer vos prêts et nous supprimerons les publicités.",
-    "subtitle": "Vos dons nous aident énormément\n",
-    "smallText": "Nourrissez nos animaux de compagnie",
+    "description": "Le Calculateur de Prêt est entièrement gratuit, et nous travaillons dur pour créer de nouvelles applications. Si vous aimez notre application, vous pouvez soutenir notre équipe avec un peu d'amour pour alimenter nos efforts ! En retour, nous activerons les notifications sur vos échéances de prêt et supprimerons les publicités.",
+    "subtitle": "Vos dons nous aident beaucoup\n",
+    "smallText": "Nourrissez nos animaux",
     "donationOptions": {
-      "option1": "USD 2,99",
-      "option2": "USD 4,99",
-      "option3": "USD 6,99"
+      "option1": "USD 2.99",
+      "option2": "USD 4.99",
+      "option3": "USD 6.99"
     },
     "restorePurchase": "RESTAURER L'ACHAT",
-    "thankYou": "Merci d'avoir donné USD {{amount}} !",
+    "thankYou": "Merci pour votre don de USD {{amount}} !",
     "restoreMessage": "Vos achats ont été restaurés."
   },
   "MainScreen": {
+    "chart": {
+      "fees": "Intérêts",
+      "capital": "Capital"
+    },
     "form": {
       "welcome": "Bienvenue",
-      "description": "Calculatrice de prêts",
+      "description": "Calculateur de Prêt",
       "inputs": {
-        "amount": "Montant du prêt",
-        "interest": "Taux d'intérêt",
+        "amount": "Montant du Prêt",
+        "interest": "Taux d'Intérêt",
         "duration": "Durée",
         "placeholder": {
           "amount": "Entrez le montant",
@@ -52,6 +56,13 @@
     }
   },
   "languageScreen": {
-    "selectLanguage": "Sélectionnez votre langue"
+    "selectLanguage": "Choisissez votre langue"
+  },
+  "components": {
+    "SummarySection": {
+      "totalToPay": "Total à Payer",
+      "amortizationTable": "Tableau d'Amortissement",
+      "saveLoan": "Enregistrer"
+    }
   }
 }

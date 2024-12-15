@@ -1,0 +1,68 @@
+{
+  "commonScreen": {
+    "drawer": {
+      "back": "वापस",
+      "title": "होम",
+      "loans": "मेरे ऋण",
+      "donate": "दान करें",
+      "removeAds": "विज्ञापन हटाएं",
+      "language": "भाषाएं",
+      "sharedAndWin": "शेयर करें और जीतें",
+      "rateUs": "हमें रेट करें",
+      "rateUsFallback": "यह सुविधा आपके डिवाइस पर समर्थित नहीं है।"
+    }
+  },
+  "donateScreen": {
+    "title": "यह सब आपके कारण संभव है!",
+    "description": "लोन कैलकुलेटर पूरी तरह से मुफ्त है, और हम नई ऐप्स बनाने के लिए कड़ी मेहनत कर रहे हैं। अगर आपको हमारा ऐप पसंद है, तो आप हमारी टीम को समर्थन देने के लिए थोड़ा प्यार दे सकते हैं! इसके बदले, हम आपको लोन भुगतान की सूचनाएं और विज्ञापन हटाने की सुविधा देंगे।",
+    "subtitle": "आपके दान से हमें बहुत मदद मिलती है\n",
+    "smallText": "हमारे पालतू जानवरों को खाना दें",
+    "donationOptions": {
+      "option1": "USD 2.99",
+      "option2": "USD 4.99",
+      "option3": "USD 6.99"
+    },
+    "restorePurchase": "खरीदारी पुनर्स्थापित करें",
+    "thankYou": "USD {{amount}} दान करने के लिए धन्यवाद!",
+    "restoreMessage": "आपकी खरीदारी बहाल कर दी गई है।"
+  },
+  "MainScreen": {
+    "chart": {
+      "fees": "ब्याज",
+      "capital": "मूलधन"
+    },
+    "form": {
+      "welcome": "स्वागत है",
+      "description": "लोन कैलकुलेटर",
+      "inputs": {
+        "amount": "लोन राशि",
+        "interest": "ब्याज दर",
+        "duration": "अवधि",
+        "placeholder": {
+          "amount": "राशि दर्ज करें",
+          "interest": "प्रतिशत दर्ज करें",
+          "duration": "अवधि दर्ज करें"
+        },
+        "unit": "महीने"
+      },
+      "result": {
+        "label": "परिणाम",
+        "text": "{{payment}} प्रति माह"
+      }
+    },
+    "button": {
+      "submit": "गणना करें",
+      "cancel": "रद्द करें"
+    }
+  },
+  "languageScreen": {
+    "selectLanguage": "अपनी भाषा चुनें"
+  },
+  "components": {
+    "SummarySection": {
+      "totalToPay": "कुल भुगतान",
+      "amortizationTable": "किश्त तालिका",
+      "saveLoan": "सहेजें"
+    }
+  }
+}

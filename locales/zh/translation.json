@@ -1,0 +1,68 @@
+{
+  "commonScreen": {
+    "drawer": {
+      "back": "返回",
+      "title": "主页",
+      "loans": "我的贷款",
+      "donate": "捐款",
+      "removeAds": "移除广告",
+      "language": "语言",
+      "sharedAndWin": "分享并赢得奖励",
+      "rateUs": "评价我们",
+      "rateUsFallback": "此功能在您的设备上不受支持。"
+    }
+  },
+  "donateScreen": {
+    "title": "这一切都多亏了您！",
+    "description": "贷款计算器完全免费，我们正在努力开发新的应用程序。如果您喜欢我们的应用程序，可以通过一些支持帮助我们的团队！作为回报，我们将为您启用贷款付款提醒并移除广告。",
+    "subtitle": "您的捐款对我们帮助很大\n",
+    "smallText": "喂养我们的宠物",
+    "donationOptions": {
+      "option1": "USD 2.99",
+      "option2": "USD 4.99",
+      "option3": "USD 6.99"
+    },
+    "restorePurchase": "恢复购买",
+    "thankYou": "感谢您的捐款 USD {{amount}}！",
+    "restoreMessage": "您的购买已成功恢复。"
+  },
+  "MainScreen": {
+    "chart": {
+      "fees": "利息",
+      "capital": "本金"
+    },
+    "form": {
+      "welcome": "欢迎",
+      "description": "贷款计算器",
+      "inputs": {
+        "amount": "贷款金额",
+        "interest": "年利率",
+        "duration": "贷款期限",
+        "placeholder": {
+          "amount": "请输入金额",
+          "interest": "请输入百分比",
+          "duration": "请输入期限"
+        },
+        "unit": "月"
+      },
+      "result": {
+        "label": "结果",
+        "text": "{{payment}} 每月"
+      }
+    },
+    "button": {
+      "submit": "计算",
+      "cancel": "取消"
+    }
+  },
+  "languageScreen": {
+    "selectLanguage": "选择您的语言"
+  },
+  "components": {
+    "SummarySection": {
+      "totalToPay": "总还款额",
+      "amortizationTable": "分期表",
+      "saveLoan": "保存"
+    }
+  }
+}

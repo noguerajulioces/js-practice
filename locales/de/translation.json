@@ -1,0 +1,68 @@
+{
+  "commonScreen": {
+    "drawer": {
+      "back": "Zurück",
+      "title": "Startseite",
+      "loans": "Meine Kredite",
+      "donate": "Spenden",
+      "removeAds": "Werbung entfernen",
+      "language": "Sprachen",
+      "sharedAndWin": "Teilen und Gewinnen",
+      "rateUs": "Bewerten Sie uns",
+      "rateUsFallback": "Diese Funktion wird auf Ihrem Gerät nicht unterstützt."
+    }
+  },
+  "donateScreen": {
+    "title": "Das alles ist dank Ihnen möglich!",
+    "description": "Der Kreditrechner ist komplett kostenlos, und wir arbeiten hart daran, neue Anwendungen zu entwickeln. Wenn Ihnen unsere App gefällt, können Sie unser Team mit etwas Liebe unterstützen, um unsere Bemühungen zu fördern! Im Gegenzug werden wir Benachrichtigungen aktivieren, wann Sie Ihre Kredite zurückzahlen müssen, und die Werbung entfernen.",
+    "subtitle": "Ihre Spenden helfen uns sehr\n",
+    "smallText": "Füttern Sie unsere Haustiere",
+    "donationOptions": {
+      "option1": "USD 2,99",
+      "option2": "USD 4,99",
+      "option3": "USD 6,99"
+    },
+    "restorePurchase": "KAUF WIEDERHERSTELLEN",
+    "thankYou": "Vielen Dank für Ihre Spende von USD {{amount}}!",
+    "restoreMessage": "Ihre Einkäufe wurden wiederhergestellt."
+  },
+  "MainScreen": {
+    "chart": {
+      "fees": "Zinsen",
+      "capital": "Kapital"
+    },
+    "form": {
+      "welcome": "Willkommen",
+      "description": "Kreditrechner",
+      "inputs": {
+        "amount": "Kreditbetrag",
+        "interest": "Zinssatz",
+        "duration": "Dauer",
+        "placeholder": {
+          "amount": "Betrag eingeben",
+          "interest": "Prozentsatz eingeben",
+          "duration": "Dauer eingeben"
+        },
+        "unit": "Monate"
+      },
+      "result": {
+        "label": "Ergebnis",
+        "text": "{{payment}} pro Monat"
+      }
+    },
+    "button": {
+      "submit": "Berechnen",
+      "cancel": "Abbrechen"
+    }
+  },
+  "languageScreen": {
+    "selectLanguage": "Wählen Sie Ihre Sprache"
+  },
+  "components": {
+    "SummarySection": {
+      "totalToPay": "Gesamtbetrag",
+      "amortizationTable": "Tilgungsplan",
+      "saveLoan": "Speichern"
+    }
+  }
+}
