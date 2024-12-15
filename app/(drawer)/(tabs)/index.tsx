@@ -60,13 +60,13 @@ export default function HomeScreen() {
             label={t('MainScreen.form.inputs.placeholder.amount')}
             value={amount}
             setValue={setAmount}
-            formatter={formatCurrency}
+            formatter={amount ? formatCurrency : undefined}
           />
           <InputField
             label={t('MainScreen.form.inputs.placeholder.interest')}
             value={interest}
             setValue={setInterest}
-            formatter={formatPercentage}
+            formatter={interest ? formatPercentage : undefined}
           />
           <InputField
             label={t('MainScreen.form.inputs.placeholder.duration')}

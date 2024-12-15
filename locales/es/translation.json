@@ -57,5 +57,12 @@
   },
   "languageScreen": {
     "selectLanguage": "Selecciona tu idioma"
+  },
+  "components": {
+    "SummarySection":{
+      "totalToPay": "Total a abonar",
+      "amortizationTable": "Tabla de Amortización",
+      "saveLoan": "Guardar"
+    }
   }
 }

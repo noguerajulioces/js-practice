@@ -53,5 +53,11 @@
   },
   "languageScreen": {
     "selectLanguage": "Select your Language"
+  },
+  "components": {
+    "SummarySection":{
+      "totalToPay": "Total a Abonar",
+      "saveLoan": "Save loan"
+    }
   }
 }
